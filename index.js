@@ -1,1 +1,4 @@
-console.log('Im Working. Im song Im beautiful')
+let a = 221;
+let b = a - 4 ;
+a = 4;
+console.log(b,a);
