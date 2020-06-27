@@ -12,25 +12,33 @@
 //     'Sun','Sun',54,true];
 // console.log(daysOfWeek);
 
-const songInfo = {
-    name:"song",
-    age:"27",
-    gender:"Male",
-    isHandsome:true,
-    favMovies:["Road of rings","HarryPotter","IronMan"],
-    favFood:[
-    {
-        name: "burger",
-        fatty:true
+// const songInfo = {
+//     name:"song",
+//     age:"27",
+//     gender:"Male",
+//     isHandsome:true,
+//     favMovies:["Road of rings","HarryPotter","IronMan"],
+//     favFood:[
+//     {
+//         name: "burger",
+//         fatty:true
 
-    },
-    {
-        name: "min",
-        fartty:false
+//     },
+//     {
+//         name: "min",
+//         fartty:false
+//     }
+//     ]
+// }
+
+// console.log(songInfo);
+// console.log(songInfo.age);
+// console.log(songInfo.favFood[1].name);
+
+function sayHello(name,age) {
+    for (let i = 0; i<3 ; i++) {
+        console.log('hello',name,"your age",age)
     }
-    ]
 }
 
-console.log(songInfo);
-console.log(songInfo.age);
-console.log(songInfo.favFood[1].name);
+sayHello("song",15)
