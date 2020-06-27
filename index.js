@@ -1,4 +1,11 @@
-let a = 221;
-let b = a - 4 ;
-a = 41;
-console.log(b,a);
+// const what = "song";
+
+// console.log(what);
+/*
+const wat = true;
+
+console.log(wat);
+*/
+
+const wat = 55.1;
+console.log(wat);
