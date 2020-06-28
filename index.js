@@ -66,6 +66,13 @@
 // console.log(calculator.divide(5,5))
  
 const title = document.querySelector('#title');
-title.innerHTML = "Hi! From JS";
-title.style.color = 'red'; 
-document.title = "i owe you"; 
+// title.innerHTML = "Hi! From JS";
+// title.style.color = 'red'; 
+// document.title = "i owe you"; 
+
+function handleClick() {
+
+    title.style.color ="blue";
+}
+
+window.addEventListener("click",handleClick);
