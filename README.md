@@ -2,6 +2,7 @@
 
 ### toggle
 주석 안의 내용이 toggle 하나로 사용 가능
+
 '''
 const title = document.querySelector('#title');
 const CLICKED_CLASS = "clicked";
@@ -22,4 +23,5 @@ function init() {
 }
 
 init()
+
 '''
