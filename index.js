@@ -65,14 +65,24 @@
 // console.log(calculator.multiple(5,5))
 // console.log(calculator.divide(5,5))
  
-const title = document.querySelector('#title');
+// const title = document.querySelector('#title');
 // title.innerHTML = "Hi! From JS";
 // title.style.color = 'red'; 
 // document.title = "i owe you"; 
 
-function handleClick() {
+// function handleClick() {
 
-    title.style.color ="blue";
+//     title.style.color ="blue";
+// }
+
+// window.addEventListener("click",handleClick);
+
+const age = prompt('how old are you')
+
+console.log(age)
+
+if(age>18) {
+    console.log('you can drink')
+} else {
+    console.log('you cant')
 }
-
-window.addEventListener("click",handleClick);
