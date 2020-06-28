@@ -65,7 +65,7 @@
 // console.log(calculator.multiple(5,5))
 // console.log(calculator.divide(5,5))
  
-// const title = document.querySelector('#title');
+const title = document.querySelector('#title');
 // title.innerHTML = "Hi! From JS";
 // title.style.color = 'red'; 
 // document.title = "i owe you"; 
@@ -77,12 +77,41 @@
 
 // window.addEventListener("click",handleClick);
 
-const age = prompt('how old are you')
+// const age = prompt('how old are you')
 
-console.log(age)
 
-if(age>18) {
-    console.log('you can drink')
-} else {
-    console.log('you cant')
+// if(age>18) {
+//     console.log('you can drink')
+// } else {
+//     console.log('you cant')
+// }
+// console.log(age)
+
+const BASE_COLOR = "red";
+const OTHER_COLOR = "green";
+
+function handleClick() {
+    const currentColor = title.style.color;
+    if (currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    } else {
+        title.style.color = BASE_COLOR;
+    }
 }
+
+function init() {
+    title.style.color = BASE_COLOR;
+    title.addEventListener('click',handleClick);
+}
+init();
+
+function handleOFfline() {
+    console.log('wifi is unstable')
+}
+
+function handleOnline() {
+    console.log("I'm back")
+}
+
+window.addEventListener('offline',handleOFfline);
+window.addEventListener('online',handleOnline);
