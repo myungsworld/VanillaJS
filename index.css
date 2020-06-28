@@ -2,6 +2,13 @@ body{
     background-color: peru;
  }
 
+.btn {
+    cursor: pointer;
+}
 h1{
     color:white;
+}
+
+.clicked{
+    color: gray;
 }
