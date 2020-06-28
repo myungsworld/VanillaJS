@@ -85,11 +85,11 @@
 //     console.log('you cant')
 // }
 // console.log(age)
-const title = document.querySelector('#title');
-const CLICKED_CLASS = "clicked";
+// const title = document.querySelector('#title');
+// const CLICKED_CLASS = "clicked";
 
-function handleClick() {
-    title.classList.toggle(CLICKED_CLASS);
+// function handleClick() {
+//     title.classList.toggle(CLICKED_CLASS);
     // const hasClass = title.classList.contains(CLICKED_CLASS);
 
     // if(hasClass){
@@ -97,10 +97,10 @@ function handleClick() {
     // }else{
     //     title.classList.add(CLICKED_CLASS);
     // }
-}
+//}
 
-function init() {
-    title.addEventListener("click", handleClick);
-}
+// function init() {
+//     title.addEventListener("click", handleClick);
+// }
 
-init()
+// init()
