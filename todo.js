@@ -53,32 +53,50 @@
 
 // init();
 
+//forEach 와 filter 는 li에 있는 모든 item을 위한 함수를 실행 시키는 것
+
 const toDoForm = document.querySelector('.js-toDoForm'),
     toDoInput = toDoForm.querySelector('input'),
     toDoList = document.querySelector('.js-toDoList');
 
 const TODOS_LS = 'toDos';
-const toDOs = [];
+// const를 하면 삭제한 투두스가 안들어가서 let으로 해야함
+let toDos = [];
+
+function deleteToDo(event){
+    const btn = event.target;
+    const del = btn.parentNode;
+    toDoList.removeChild(del);
+    //filter()함수는 모든 아이템을 통해 함수를 실행하고
+    //true인 아이템만 가지고 새로운 배열을 만듬
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(del.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
 
 function saveToDos() {
-    localStorage.setItem(TODOS_LS,JSON.stringify(toDOs));
+    localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
 }
 
 function paintToDo(text) {
     const li = document.createElement('li');
     const delBtn = document.createElement('button');
+    delBtn.addEventListener("click",deleteToDo);
     const span = document.createElement('span');
-    const newId = toDOs.lengh + 1;
+    const newId = toDos.length + 1;
     delBtn.innerText= 'X';
     span.innerText= text;
     li.append(delBtn);
     li.append(span);
+    li.id = newId;
     toDoList.appendChild(li);
     const toDoObj = {
         text : text,
         id : newId
     };
-    toDOs.push(toDoObj);
+    toDos.push(toDoObj);
     saveToDos();
 }
 
