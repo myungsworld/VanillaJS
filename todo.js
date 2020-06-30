@@ -1,54 +1,109 @@
+// const toDoForm = document.querySelector('.js-toDoForm'),
+//       toDoInput = toDoForm.querySelector('input'),
+//       toDoList = document.querySelector('.js-toDoList');
+
+// const TODOS_LS = 'toDos';
+
+// const toDos = [];
+
+// function saveToDos(){
+//     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
+// }
+
+// function paintToDo(text) {
+//     const li = document.createElement("li");
+//     const delBtn = document.createElement("button");
+//     const span = document.createElement("span");
+//     const newId = toDos.length + 1;
+//     delBtn.innerText="X";
+//     span.innerText= text;
+//     li.append(delBtn);
+//     li.append(span);
+//     li.id = newId; 
+//     toDoList.appendChild(li);
+//     const toDoObj = {
+//         text : text,
+//         id : newId
+//     };
+//     toDos.push(toDoObj);
+//     saveToDos();
+// }
+
+// function handleSubmit(event) {
+//     event.preventDefault();
+//     const currentValue = toDoInput.value;
+//     paintToDo(currentValue)
+//     toDoInput.value="";
+// }
+
+// function loadToDos() {
+//     const loadedToDos = localStorage.getItem(TODOS_LS);
+//     if(loadedToDos !== null){
+//         const parsedToDos = JSON.parse(loadedToDos);
+//         parsedToDos.forEach(function(toDo){
+//             paintToDo(toDo.text);
+//         })
+//     }
+// }
+
+// function init(){
+//     loadToDos();
+//     toDoForm.addEventListener("submit",handleSubmit);
+// }
+
+// init();
+
 const toDoForm = document.querySelector('.js-toDoForm'),
-      toDoInput = toDoForm.querySelector('input'),
-      toDoList = document.querySelector('.js-toDoList');
+    toDoInput = toDoForm.querySelector('input'),
+    toDoList = document.querySelector('.js-toDoList');
 
 const TODOS_LS = 'toDos';
+const toDOs = [];
 
-const toDos = [];
-
-function saveToDos(){
-    localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
+function saveToDos() {
+    localStorage.setItem(TODOS_LS,JSON.stringify(toDOs));
 }
 
 function paintToDo(text) {
-    const li = document.createElement("li");
-    const delBtn = document.createElement("button");
-    const span = document.createElement("span");
-    const newId = toDos.length + 1;
-    delBtn.innerText="X";
+    const li = document.createElement('li');
+    const delBtn = document.createElement('button');
+    const span = document.createElement('span');
+    const newId = toDOs.lengh + 1;
+    delBtn.innerText= 'X';
     span.innerText= text;
     li.append(delBtn);
     li.append(span);
-    li.id = newId; 
     toDoList.appendChild(li);
     const toDoObj = {
         text : text,
         id : newId
     };
-    toDos.push(toDoObj);
+    toDOs.push(toDoObj);
     saveToDos();
 }
 
 function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDo(currentValue)
+    paintToDo(currentValue);
     toDoInput.value="";
 }
 
 function loadToDos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null){
+        //JSON.parse(loadedToDos)로 스트링을 객체로 다시 표현
         const parsedToDos = JSON.parse(loadedToDos);
         parsedToDos.forEach(function(toDo){
-            paintToDo(toDo.text);
+            paintToDo(toDo.text)
         })
     }
 }
 
-function init(){
+function init() {
     loadToDos();
     toDoForm.addEventListener("submit",handleSubmit);
+    
 }
 
 init();
