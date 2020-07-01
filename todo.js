@@ -63,15 +63,15 @@ const TODOS_LS = 'toDos';
 // const를 하면 삭제한 투두스가 안들어가서 let으로 해야함
 let toDos = [];
 
-function deleteToDo(event){
+
+function deleteToDo(event) {
     const btn = event.target;
     const del = btn.parentNode;
     toDoList.removeChild(del);
-    //filter()함수는 모든 아이템을 통해 함수를 실행하고
-    //true인 아이템만 가지고 새로운 배열을 만듬
-    const cleanToDos = toDos.filter(function(toDo){
-        return toDo.id !== parseInt(del.id);
-    });
+// 배열중 return 값이 true 인것만 이용해서 다시 배열 생성
+    const cleanToDos = toDos.filter(function(toDo){ 
+        return toDo.id !== parseInt(del.id); 
+    })
     toDos = cleanToDos;
     saveToDos();
 }
