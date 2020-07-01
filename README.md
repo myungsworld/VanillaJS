@@ -1,5 +1,5 @@
 # VanillaJS
-
+![JS](https://user-images.githubusercontent.com/56465854/86203363-cbb43300-bb9f-11ea-8426-a41f116ebb3a.png)
 ### toggle
 주석 안의 내용이 toggle 하나로 사용 가능
 
